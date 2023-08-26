@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3 - CSS Grid</title>
+</head>
+<style>
+    body{
+        background-color: bisque;
+        color: white;
+        text-align: center;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 220px 300px 300px;
+        grid-template-rows: 100px 250px 250px 100px;
+        grid-gap: 2px;
+        width: fit-content;
+        margin: 20px auto;
+    }
+    .container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .header{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 1;
+        grid-row-end: span 1;
+        background-image: linear-gradient(to right, rgba(154, 101, 238, 0.932) , rgba(136, 43, 243, 0.719));
+    }
+    .menu{
+        grid-column: 0 / 1;
+        grid-row-start: 2;
+        grid-row-end: span 2;
+        background-image: linear-gradient(to bottom, rgb(115, 231, 247) , rgb(7, 154, 173));
+    }
+    .content1{
+        grid-column: 2 / -1;
+        grid-row-start: 2;
+        grid-row-end: span 1;
+        background-image: linear-gradient(to bottom right, rgba(154, 101, 238, 0.932) ,rgb(109, 158, 248), rgba(83, 244, 255, 0.719));
+    }
+    .content2{
+        grid-column: 2 / 3;
+        grid-row-start: 3;
+        grid-row-end: span 1;
+        background-image: linear-gradient(to bottom right, rgba(154, 101, 238, 0.932) ,rgb(109, 158, 248), rgba(83, 244, 255, 0.719));
+    }
+    .content3{
+        grid-column: 3 / -1;
+        grid-row-start: 3;
+        grid-row-end: span 1;
+        background-image: linear-gradient(to bottom right, rgba(154, 101, 238, 0.932) ,rgb(109, 158, 248), rgba(83, 244, 255, 0.719));
+    }
+    .footer{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 4;
+        grid-row-end: span 1;
+        background-image: linear-gradient(to bottom right, rgba(154, 101, 238, 0.932) , rgba(136, 43, 243, 0.719));
+    }
+    
+
+</style>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="menu">sidebar</div>
+        <div class="content1">Content-1</div>
+        <div class="content2">Content-2</div>
+        <div class="content3">Content-3</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
