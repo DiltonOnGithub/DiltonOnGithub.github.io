@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum</title>
+
+</head>
+<style>
+    @font-face {
+    font-family: Quicksand;
+    src: url(fonts/Quicksand-VariableFont_wght.ttf);
+    }
+    body{
+        background-color: rgba(230, 230, 230, 0.884);
+        padding: 0px;
+        margin: 0px;
+        font-family: Quicksand;
+    }
+    .header{
+        background-color: rgb(13, 13, 78);
+        background-image: url("assets/header.svg");
+        border-bottom: 3px solid rgb(78, 190, 255);
+        height: fit-content;
+    }
+    .header img{
+        width: 200px;
+        margin: 15px 30px;
+    }
+    .container{
+        background-color: white;
+        width: 60%;
+        padding: 20px;
+        margin: 50px auto;
+        border-radius: 2px;
+        border-top: 6px solid rgb(78, 190, 255);
+    }
+    #r1, #r2 {
+            accent-color: green;
+           
+    }
+    input[type='radio']{
+        appearance: none;
+  -webkit-appearance: none;
+
+  /* For a circular appearance we need a border-radius. */
+  border-radius: 50%;
+
+  /* The background will be the radio dot's color. */
+  background: green;
+
+  /* The border will be the spacing between the dot and the outer circle */
+  border: 2px solid #FFF;
+
+  /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
+  box-shadow: 0 0 0 0.5px green;
+        transform: scale(5);
+        margin-bottom: 5px;
+        
+    }
+    .Radio{
+        font-size: 18px;
+    }
+    .formBanner{
+        width: 100%;
+        margin: 10px 0px 20px;
+    }
+    h3{
+        display: inline;
+        font-weight: 600;
+        font-size: 30px;
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+    }  
+    .formBanner a{
+        display: inline;
+        position: sticky;
+        left: 0px;
+    }  
+    .dropdown{
+        display: block;
+    }
+    
+</style>
+<body>
+
+    <div class="header">
+        <img src="assets/headerlogo.svg" alt="">
+    </div>
+
+    <div class="container">
+
+        <div class="formBanner">
+            <a href=""><img src="assets/back-arrow.svg" alt=""></a><h3> Log in with Quantum</h3>
+        </div>
+        
+        <form action="">
+
+            <input type="radio" name="schoolType" id="r1">
+            <label for="r1" class="Radio">District</label>
+
+            <input type="radio" name="schoolType" id="r2">
+            <label for="r2" class="Radio">Independent school</label>
+
+            <label for="states" class="dropdown">State</label>
+            <select name="states" id="state">
+                <option value="Alabama">Alabama</option>
+            </select>
+            <label for="districts" class="dropdown">District</label>
+            <select name="districts" id="district">
+                <option value="ADS">Alabama District School</option>
+            </select>
+<br>
+            <input type="text" placeholder="Username/Email ID*">
+            <label for="state"></label>
+            <label for="district"></label>
+            <br>
+            <a href="">FORGOT USERNAME?</a>
+            <br>
+            <input type="password" name="" id="" placeholder="Password*">
+            <br>
+            <a href="">FORGOT PASSWORD?</a>
+            <br>
+            <input type="checkbox" name="" id="rememberMe">
+            <label for="RememberMe">Remember Me</label> 
+            <br>   
+            <input type="submit" value="LOG IN">
+        </form>
+    </div>
+    
+    <div class="footer">
+        <a href="">About</a> | <a href="">Contact Us</a>
+        <div class="footer-banner">
+            <img src="assets/footerlogo.svg" alt=""> | Copyright &copy; 2020-2021 Zeus Systems Pvt. Ltd. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
