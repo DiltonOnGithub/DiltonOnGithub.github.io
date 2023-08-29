@@ -12,6 +12,10 @@
     font-family: Quicksand;
     src: url(fonts/Quicksand-VariableFont_wght.ttf);
     }
+    a{
+        color: green;
+        text-decoration: none;
+    }
     body{
         background-color: rgba(230, 230, 230, 0.884);
         padding: 0px;
@@ -19,6 +23,7 @@
         font-family: Quicksand;
     }
     .header{
+        width: 100%;
         background-color: rgb(13, 13, 78);
         background-image: url("assets/header.svg");
         border-bottom: 3px solid rgb(78, 190, 255);
@@ -30,59 +35,142 @@
     }
     .container{
         background-color: white;
-        width: 60%;
-        padding: 20px;
+        width: 40%;
+        padding: 30px 40px;
         margin: 50px auto;
         border-radius: 2px;
         border-top: 6px solid rgb(78, 190, 255);
     }
-    #r1, #r2 {
-            accent-color: green;
-           
-    }
+    
     input[type='radio']{
-        appearance: none;
-  -webkit-appearance: none;
-
-  /* For a circular appearance we need a border-radius. */
-  border-radius: 50%;
-
-  /* The background will be the radio dot's color. */
-  background: green;
-
-  /* The border will be the spacing between the dot and the outer circle */
-  border: 2px solid #FFF;
-
-  /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
-  box-shadow: 0 0 0 0.5px green;
-        transform: scale(5);
-        margin-bottom: 5px;
         
+
+        /* The background will be the radio dot's color. */
+        accent-color: green;
+
+        transform: scale(1.5);
+        margin-bottom: 5px;
     }
+    input[type=radio]:hover {
+         background-color: green;
+      }
     .Radio{
         font-size: 18px;
+        margin: 0px 30px 0px 8px;
     }
     .formBanner{
         width: 100%;
         margin: 10px 0px 20px;
+        padding: 0px;
     }
     h3{
         display: inline;
+        position: relative;
         font-weight: 600;
         font-size: 30px;
-        width: fit-content;
+        width: 90%;
         margin: auto;
-        text-align: center;
+        z-index: 90;
     }  
-    .formBanner a{
+    .container .formBanner a{
         display: inline;
-        position: sticky;
-        left: 0px;
+        z-index: 100;
     }  
     .dropdown{
         display: block;
+        margin-top: 20px;
+        font-size: 14px;
+        color: rgb(78, 78, 78);
+    }
+    input{
+        margin-top: 20px;
+    }
+    .custom-select {
+        position: relative;
+    }
+
+    .custom-select select {
+        width: 100%;
+        background-color: none;
+        border: 0px;
+        border-bottom: 1px solid rgb(202, 202, 202);
+        padding: 0px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: Quicksand;
+        font-weight: 500;
+    }
+
+    
+    input[type='text'], input[type='password']{
+        width: 100%;
+        border: 0px;
+        padding: 0px;
+        font-size: 16px;
+        font-family: Quicksand;
+        border-bottom: 1px solid rgb(202, 202, 202);
+    }
+    .forgot{
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 5px;
+        color: rgb(68, 177, 68);
+    }
+    input[type='checkbox']{
+        accent-color: green;
+        transform: scale(1.5);
+        margin-bottom: 5px;
+        
+    }
+    input[type="submit"]{
+        display: block;
+        color: black;
+        border: 0px;
+        background-color: rgb(68, 177, 68);
+        padding: 2px;
+        width: 250px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: Quicksand;
+        font-weight: 600;
+        height: 40px;
+        margin: 15px auto 0px;
     }
     
+
+        @media (orientation: portrait) {
+        .container {
+            width: 90%;
+        }
+        }
+        .footer{
+            text-align: center;
+        }
+        .footer a{
+            font-size: 16px;
+            padding: 0px 10px;
+        }
+        .footer-banner{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            margin-top: 10px;
+            background-color: rgb(179, 179, 179);
+            height: 50px;
+            padding: 10px;
+        }
+        .footer-banner img{
+            width: 150px;
+            padding-right: 10px;
+            border-right: 1px solid grey;
+        }
+        .footer-banner p{
+            margin-left: 10px;
+            color: rgb(77, 77, 77);
+        }
 </style>
 <body>
 
@@ -95,7 +183,7 @@
         <div class="formBanner">
             <a href=""><img src="assets/back-arrow.svg" alt=""></a><h3> Log in with Quantum</h3>
         </div>
-        
+        <br>
         <form action="">
 
             <input type="radio" name="schoolType" id="r1">
@@ -104,24 +192,30 @@
             <input type="radio" name="schoolType" id="r2">
             <label for="r2" class="Radio">Independent school</label>
 
-            <label for="states" class="dropdown">State</label>
-            <select name="states" id="state">
-                <option value="Alabama">Alabama</option>
-            </select>
-            <label for="districts" class="dropdown">District</label>
+            <div class="custom-select">
+                <label for="states" class="dropdown">State</label>
+                <select name="states" id="state">
+                    <option value="Alabama">Alabama</option>
+                </select>
+            </div>
+
+            <div class="custom-select">
+                <label for="districts" class="dropdown">District</label>
             <select name="districts" id="district">
                 <option value="ADS">Alabama District School</option>
             </select>
-<br>
+            </div>
+            
+            <br>
             <input type="text" placeholder="Username/Email ID*">
             <label for="state"></label>
             <label for="district"></label>
             <br>
-            <a href="">FORGOT USERNAME?</a>
+            <a href="" class="forgot">FORGOT USERNAME?</a>
             <br>
             <input type="password" name="" id="" placeholder="Password*">
             <br>
-            <a href="">FORGOT PASSWORD?</a>
+            <a href="" class="forgot">FORGOT PASSWORD?</a>
             <br>
             <input type="checkbox" name="" id="rememberMe">
             <label for="RememberMe">Remember Me</label> 
@@ -131,9 +225,9 @@
     </div>
     
     <div class="footer">
-        <a href="">About</a> | <a href="">Contact Us</a>
+        <a href="" style="border-right: 1px solid grey;">About</a><a href="">Contact Us</a>
         <div class="footer-banner">
-            <img src="assets/footerlogo.svg" alt=""> | Copyright &copy; 2020-2021 Zeus Systems Pvt. Ltd. All rights reserved.
+            <img src="assets/footerlogo.svg" alt=""><p>Copyright &copy; 2020-2021 <b>Zeus Systems Pvt. Ltd.</b> All rights reserved.</p>
         </div>
     </div>
 </body>
