@@ -118,7 +118,7 @@ border-bottom: 2px solid white;
 .detail-card p, label{
     font-size: 12px;
 }
-.detail-card select{
+select{
     border: 0px;
     padding: 0px 0px 5px 0px;
     background-color: transparent;
@@ -127,6 +127,72 @@ border-bottom: 2px solid white;
     font-size: 16px;
     color: rgb(75, 74, 74);
     font-family: Quicksand;
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.card-container > div {
+    flex: 30%;
+    margin-top: 20px;
+  }
+.card{
+    background-color: white;
+    padding: 20px 20px 15px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.data{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+}
+.data img{
+ width: 170px;
+ margin-right: 15px;
+}
+.data .values{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.values p{
+    margin:5px 0px 0px 0px;
+}
+.values .title{
+    font-weight: 700;
+    font-size: 18px;
+}
+.values .small{
+    color: grey;
+    font-weight: 500;
+    font-size: 13px;
+}
+.small span{
+    color: green;
+}
+.small b{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+.values select{
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+.actions{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.actions img{
+    transform: scale(1.2);
 }
 .footer{
 text-align: center;
@@ -164,12 +230,19 @@ color: rgb(77, 77, 77);
 .radio-block{
 display: inline;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 991px) {
 .container{
 width: 60%;
 padding: 20px 20px;
 margin: 30px auto 30px;
 border-radius: 2px;
 border-top: 6px solid rgb(78, 190, 255);
+}
+.card-container{
+    align-items: center;
+    flex-direction: column;
+}
+.card{
+    width: 80%;
 }
 }
