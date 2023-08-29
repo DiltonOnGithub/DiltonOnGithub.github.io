@@ -21,13 +21,21 @@
         padding: 0px;
         margin: 0px;
         font-family: Quicksand;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
     .header{
         width: 100%;
         background-color: rgb(13, 13, 78);
         background-image: url("assets/header.svg");
         border-bottom: 3px solid rgb(78, 190, 255);
-        height: fit-content;
     }
     .header img{
         width: 200px;
@@ -37,7 +45,7 @@
         background-color: white;
         width: 40%;
         padding: 30px 40px;
-        margin: 50px auto;
+        margin: 40px auto 40px;
         border-radius: 2px;
         border-top: 6px solid rgb(78, 190, 255);
     }
@@ -51,8 +59,8 @@
         transform: scale(1.5);
         margin-bottom: 5px;
     }
-    input[type=radio]:hover {
-         background-color: green;
+    input[type=radio]:focus {
+        background-color: green;
       }
     .Radio{
         font-size: 18px;
@@ -102,13 +110,30 @@
     }
 
     
-    input[type='text'], input[type='password']{
+    input[type='text']{
         width: 100%;
         border: 0px;
         padding: 0px;
         font-size: 16px;
         font-family: Quicksand;
         border-bottom: 1px solid rgb(202, 202, 202);
+    }
+    .password{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+       
+    }
+    input[type='password'], .password img{
+        border: 0px;
+        padding: 0px;
+        font-size: 16px;
+        font-family: Quicksand;
+        margin: 0px;
+        border-bottom: 1px solid rgb(202, 202, 202);
+    }
+    input[type='password']{
+        width:100%
     }
     .forgot{
         display: block;
@@ -118,11 +143,19 @@
         margin-top: 5px;
         color: rgb(68, 177, 68);
     }
-    input[type='checkbox']{
-        accent-color: green;
-        transform: scale(1.5);
-        margin-bottom: 5px;
+    input[type="checkbox"] {
+    display: none;
+}
+    input[type="checkbox"] + label span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 45px;
+    height: 45px;
+    background: url('assets/checkbox-unchecked.svg') 0px center no-repeat;
+}
         
+.custom-select select:focus{
+        border: 0px;
     }
     input[type="submit"]{
         display: block;
@@ -140,15 +173,16 @@
     }
     
 
-        @media (orientation: portrait) {
-        .container {
-            width: 90%;
-        }
-        }
+    
+    
         .footer{
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: 0px;
             position: static;
             bottom: 0px;
-            text-align: center;
+            width: 100%;
+            height: 60px;
         }
         .footer a{
             font-size: 16px;
@@ -174,11 +208,14 @@
             margin-left: 10px;
             color: rgb(77, 77, 77);
         }
-        @media only screen and (max-width: 991px) {
+        .radio-block{
+            display: inline;
+        }
+        @media only screen and (max-width: 900px) {
             .container{
-                width: 80%;
+                width: 60%;
                 padding: 20px 20px;
-                margin: 50px auto;
+                margin: 30px auto 30px;
                 border-radius: 2px;
                 border-top: 6px solid rgb(78, 190, 255);
             }
@@ -198,12 +235,16 @@
         </div>
         <br>
         <form action="">
-
-            <input type="radio" name="schoolType" id="r1">
-            <label for="r1" class="Radio">District</label>
-
-            <input type="radio" name="schoolType" id="r2">
-            <label for="r2" class="Radio">Independent school</label>
+            
+            <div class="radio-block">
+                <input type="radio" name="schoolType" id="r1">
+                <label for="r1" class="Radio">District</label>
+            </div>
+            <div class="radio-block">
+                <input type="radio" name="schoolType" id="r2">
+                <label for="r2" class="Radio">Independent school</label>
+            </div>
+            
 
             <div class="custom-select">
                 <label for="states" class="dropdown">State</label>
@@ -226,7 +267,9 @@
             <br>
             <a href="" class="forgot">FORGOT USERNAME?</a>
             <br>
-            <input type="password" name="" id="" placeholder="Password*">
+            <div class="password">
+                <input type="password" name="" id="" placeholder="Password*"><img src="assets/eye.svg" alt="">
+            </div>
             <br>
             <a href="" class="forgot">FORGOT PASSWORD?</a>
             <br>
