@@ -1,0 +1,44 @@
+.navbar-menu{
+    margin-left: auto;
+    a{
+        margin-right: 15px;
+        padding-bottom: 12px;
+        height: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        color: #3FD28B;
+        .active{
+            color: white;
+            border-bottom: 4px solid white;
+        }
+    }
+    img{
+        margin: 0px;
+        font-weight: 500;
+        font-size: 18px;
+        color: rgb(32, 202, 32);
+    }
+}
+.icons{
+    vertical-align: middle;
+    display: inline-flex;
+}
+.num {
+    margin: 0px;
+    padding:1px;
+    position: relative;
+    left:-10px;
+    top: -6px;
+    width: 13px;
+    height: 13px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(0, 132, 255);
+    border-radius: 100%;
+}
+.ham{
+    vertical-align: middle;
+    display: inline-flex;
+    display: none;
+}

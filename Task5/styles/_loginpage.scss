@@ -1,0 +1,129 @@
+.container{
+    background-color: white;
+    min-width: 30%;
+    padding: 30px 40px;
+    margin: 40px auto 40px;
+    border-radius: 2px;
+    border-top: 6px solid rgb(78, 190, 255);
+}
+
+.formBanner{
+    width: 100%;
+    margin: 10px 0px 20px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    a{
+        display: inline;
+        float: left;
+    }
+}
+
+h3{
+    clear: left;
+    display: inline;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+input[type='radio']{
+    accent-color: green;
+    transform: scale(1.5);
+    margin-bottom: 5px;
+    &:focus {
+        background-color: green;
+    }
+}
+.Radio{
+    font-size: 18px;
+    margin: 0px 30px 0px 8px;
+}
+.radio-block{
+    display: inline;
+}
+
+.dropdown{
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgb(78, 78, 78);
+}
+input{
+    margin-top: 20px;
+}
+.custom-select {
+    position: relative;
+    select {
+        width: 100%;
+        background-color: none;
+        border: 0px;
+        border-bottom: 1px solid rgb(202, 202, 202);
+        padding: 0px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: Quicksand;
+        font-weight: 500;
+        &:focus{
+            border: 0px;
+        }
+    }
+}
+
+
+input[type='text']{
+    width: 100%;
+    border: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: Quicksand;
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+.password{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+   
+}
+input[type='password'], .password img{
+    border: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: Quicksand;
+    margin: 0px;
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+input[type='password']{
+    width:100%
+}
+.forgot{
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+    color: #1F7A54;
+}
+
+input[type="checkbox"] {
+    accent-color: #1F7A54;
+    transform: scale(1.5);
+}
+
+input[type="submit"]{
+    display: block;
+    color: black;
+    border: 0px;
+    background-color: #3FD28B;
+    padding: 2px;
+    width: 216px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Quicksand;
+    font-weight: 600;
+    height: 40px;
+    margin: 30px auto 0px;
+}

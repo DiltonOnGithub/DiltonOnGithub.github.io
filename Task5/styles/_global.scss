@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Quicksand;
+    src: url(/Task5/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+a{
+    color: green;
+    text-decoration: none;
+}
+*{
+    font-family: Quicksand;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(231, 231, 231, 0.829);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <div class="header">
+        <img src="assets/headerlogo.svg" alt="">
+        <div class="navbar-menu">
+            <a href="" class="active item">DASHBOARD</a>
+            <a href="" class="item">CONTENT</a>
+            <a href="" class="item">USERS</a>
+            <a href="" class="item">REPORTS</a>
+            <a href="" class="item">ADMIN</a>
+            <div class="icons"><img src="assets/alerts.svg" alt=""><span class="num">2</span></a></div>
+            <div class="icons"><img src="assets/announcements.svg" alt=""><span class="num">1</span></div>
+            <div class="icons"><img src="assets/account_circle.svg" alt=""><span class="num" style="background-color: white;color: black;">T</span></div>
+            <div class="ham"><img src="assets/hamburger-menu.svg" alt=""></div>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+
+        <div class="banner">
+            <div class="section" style="border-bottom: 4px solid black;">
+                <img src="assets/courses.svg" alt="">
+                <p><h1>4</h1> Courses</p>
+            </div>
+            <div class="section">
+                <img src="assets/classes.svg" alt="">
+                <p><h1>4</h1> Classes</p>
+            </div>
+        </div>
+
+        <div class="display-details">
+            <div class="detail-card">
+                <p>Showing 4 of 4 courses</p>
+            </div>
+            <div  class="detail-card">
+                <label for="sortBy">Sort By: </label>
+                <select name="sortBy" id="sortBy">
+                    <option value="CourseName">Course Name</option>
+                </select>
+                <img src="assets/sort.svg" alt="">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <p class="expired expired-false"></p>
+                <div class="data">
+                    <img src="assets/course1.svg" alt="">
+                    <div class="values">
+                        <p class="title">Acceleration<img src="assets/favourite.svg" class="fav"alt=""></p>
+                        <p class="small">Physics | Grade 7 <span>+2</span></p>
+                        <p class="small"><b>4</b> Units <b>18</b> Lessons <b>42</b> Topics</p>
+                        <select name="" id="">
+                            <option value="CourseName">Mr Frank's Class B</option>
+                        </select>
+                        <p class="small">50 students | 21 Jan 2020 - 21 Aug 2020</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <img src="assets/eye.svg" alt="">
+                    <img src="assets/manage.svg" alt="">
+                    <img src="assets/grade.svg" alt="">
+                    <img src="assets/reports.svg" alt="">
+                </div>
+            </div>
+            <div class="card">
+                <p class="expired expired-false"></p>
+                <div class="data">
+                    <img src="assets/course2.svg" alt="">
+                    <div class="values">
+                        <p class="title">Acceleration <span><img src="assets/favourite.svg" class="fav"alt=""></span></p>
+                        <p class="small">Physics | Grade 7 <span>+2</span></p>
+                        <p class="small"><b>4</b> Units <b>18</b> Lessons <b>42</b> Topics</p>
+                        <select name="" id="">
+                            <option value="CourseName">Mr Frank's Class B</option>
+                        </select>
+                        <p class="small">50 students | 21 Jan 2020 - 21 Aug 2020</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <img src="assets/eye.svg" alt="">
+                    <img src="assets/manage.svg" class="disabled" alt="">
+                    <img src="assets/grade.svg" class="disabled" alt="">
+                    <img src="assets/reports.svg" alt="">
+                </div>
+            </div>
+            <div class="card">
+                <p class="expired expired-false"></p>
+                <div class="data">
+                    <img src="assets/course3.svg" alt="">
+                    <div class="values">
+                        <p class="title">Acceleration<img src="assets/favourite.svg" class="fav"alt=""></p>
+                        <p class="small">Physics | Grade 7 <span>+2</span></p>
+                        <p class="small"><b>4</b> Units <b>18</b> Lessons <b>42</b> Topics</p>
+                        <select name="" id="">
+                            <option value="CourseName">Mr Frank's Class B</option>
+                        </select>
+                        <p class="small">50 students | 21 Jan 2020 - 21 Aug 2020</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <img src="assets/eye.svg" alt="">
+                    <img  class="disabled" src="assets/manage.svg" alt="">
+                    <img class="disabled" src="assets/grade.svg" alt="">
+                    <img src="assets/reports.svg" alt="">
+                </div>
+            </div>
+            <div class="card">
+                <p class="expired">EXPIRED</p>
+                <div class="data">
+                    <img src="assets/course4.svg" alt="">
+                    <div class="values">
+                        <p class="title">Acceleration<img src="assets/not-favourite.svg" class="fav"alt=""></p>
+                        <p class="small">Physics | Grade 7 <span>+2</span></p>
+                        <p class="small"><b>4</b> Units <b>18</b> Lessons <b>42</b> Topics</p>
+                        <select name="" id="">
+                            <option value="CourseName">Mr Frank's Class B</option>
+                        </select>
+                        <p class="small">50 students | 21 Jan 2020 - 21 Aug 2020</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <img src="assets/eye.svg" alt="">
+                    <img src="assets/manage.svg" alt="">
+                    <img src="assets/grade.svg" alt="">
+                    <img src="assets/reports.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <a href="" style="border-right: 1px solid grey;">About</a><a href="">Contact Us</a>
+        <div class="footer-banner">
+            <img src="assets/footerlogo.svg" alt=""><p>Copyright &copy; 2020-2021 <b>Zeus Systems Pvt. Ltd.</b> All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
