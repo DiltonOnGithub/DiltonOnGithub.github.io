@@ -7,14 +7,15 @@ a{
     color: green;
     text-decoration: none;
 }
-
+*{
+    font-family: Quicksand;
+}
 body{
     padding: 0px;
     margin: 0px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Quicksand;
     background-color: rgba(231, 231, 231, 0.829);
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;
@@ -35,7 +36,7 @@ body::-webkit-scrollbar {
 
 .container{
     background-color: white;
-    width: 40%;
+    min-width: 30%;
     padding: 30px 40px;
     margin: 40px auto 40px;
     border-radius: 2px;
@@ -58,19 +59,22 @@ input[type=radio]:focus {
     width: 100%;
     margin: 10px 0px 20px;
     padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 h3{
+    clear: left;
     display: inline;
-    position: relative;
+    text-align: center;
     font-weight: 600;
     font-size: 30px;
     width: 90%;
     margin: auto;
-    z-index: 90;
 }  
 .container .formBanner a{
     display: inline;
-    z-index: 100;
+    float: left;
 }  
 .dropdown{
     display: block;
@@ -128,18 +132,13 @@ input[type='password']{
     font-size: 14px;
     font-weight: 600;
     margin-top: 5px;
-    color: rgb(68, 177, 68);
+    color: #1F7A54;
 }
 input[type="checkbox"] {
-    display: none;
+    accent-color: #1F7A54;
+    transform: scale(1.5);
 }
-input[type="checkbox"] + label span {
-    display: inline-block;
-    vertical-align: middle;
-    width: 45px;
-    height: 45px;
-    background: url('assets/checkbox-unchecked.svg') 0px center no-repeat;
-}
+
 .custom-select select:focus{
     border: 0px;
 }
@@ -147,15 +146,15 @@ input[type="submit"]{
     display: block;
     color: black;
     border: 0px;
-    background-color: rgb(68, 177, 68);
+    background-color: #3FD28B;
     padding: 2px;
-    width: 250px;
+    width: 216px;
     border-radius: 5px;
     font-size: 16px;
     font-family: Quicksand;
     font-weight: 600;
     height: 40px;
-    margin: 15px auto 0px;
+    margin: 30px auto 0px;
 }
 
 .radio-block{
@@ -172,7 +171,7 @@ input[type="submit"]{
     height: 20px;
     font-weight: 500;
     font-size: 18px;
-    color: rgb(32, 202, 32);
+    color: #3FD28B;
 }
 .navbar-menu img{
     margin: 0px;
@@ -219,7 +218,7 @@ a.active{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: rgb(62, 207, 62);
+    background-color: #8DDC97;
 }
 .section{
     display: flex;
@@ -247,10 +246,11 @@ a.active{
 .detail-card{
     display: inline;
     align-items: center;
-    color: rgb(90, 90, 90);
+    color: #686868;
 }
 .detail-card p, label{
     font-size: 12px;
+    font-weight: 600;
 }
 .detail-card select{
     border: 0px;
@@ -259,8 +259,8 @@ a.active{
     width: 150px;
     border-bottom: 1px solid grey;
     font-size: 16px;
+    font-weight: 700;
     color: rgb(75, 74, 74);
-    font-family: Quicksand;
 }
 
 .card-container{
@@ -276,9 +276,27 @@ a.active{
 
 .card{
     background-color: white;
-    padding: 20px 20px 15px 15px;
+    padding: 0px 20px 15px 15px;
     display: flex;
     flex-direction: column;
+}
+.expired{
+    padding: 0px;
+    margin: 0px;
+    opacity: 1;
+    color: #D80000;
+    font-size: 10px;
+    font-family: Museo Sans 500;
+    position: relative;
+    left:-15px;
+    height: 15px;
+    width:fit-content;
+    padding:2px;
+    margin-bottom:5px;
+    background-color: #FFE4E6;
+}
+.expired-false{
+    background-color: transparent;
 }
 .data{
     height: fit-content;
@@ -302,7 +320,7 @@ a.active{
 
 .values .title{
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     width: 100%;
 }
 .title img.fav{
@@ -312,26 +330,30 @@ a.active{
     height: 10px;
     transform: scale(3);
 }
+
 .values .small{
-    color: grey;
+    color: #666666;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
 }
 .small span{
     color: green;
 }
 .small b{
     color: black;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
 }
 .values select{
+    font-family: Quicksand;
     width: 95%;
     margin-top: 12px;
     margin-bottom: 8px;
     border:0px;
     padding:5px;
     border-bottom: 1px solid grey;
+    font-size: 16px;
+    font-weight: 700;
 }
 .actions{
     margin-top: 15px;
@@ -343,7 +365,7 @@ a.active{
     transform: scale(1.2);
 }
 .disabled{
-    color: grey;
+    opacity: 0.4;
 }
 
 .footer{
