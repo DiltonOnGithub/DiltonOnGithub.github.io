@@ -252,6 +252,40 @@ input[type=submit] {
   vertical-align: middle;
   display: inline-flex;
   display: none;
+  margin-right: 0px;
+}
+
+.ham-menu {
+  position: fixed;
+  top: 50px;
+  right: 40px;
+  height: 500px;
+  width: 200px;
+  background-color: aquamarine;
+  overflow-y: scroll;
+  z-index: 10000;
+}
+
+.alerts {
+  position: fixed;
+  top: 50px;
+  right: 80px;
+  height: 500px;
+  width: 200px;
+  background-color: aquamarine;
+  overflow-y: scroll;
+  z-index: 10000;
+}
+
+.announcements {
+  position: fixed;
+  top: 50px;
+  right: 120px;
+  height: 500px;
+  width: 200px;
+  background-color: aquamarine;
+  overflow-y: scroll;
+  z-index: 10000;
 }
 
 .dashboard-container {
@@ -444,7 +478,7 @@ input[type=submit] {
   }
   .ham {
     display: inline;
-    margin-right: 20px;
+    margin-right: 0px;
   }
   .item {
     display: none;
