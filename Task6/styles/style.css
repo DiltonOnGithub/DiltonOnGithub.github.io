@@ -272,15 +272,29 @@ input[type=submit] {
   font-family: inherit;
   z-index: 10000;
   box-shadow: rgba(0, 0, 0, 0.2392156863) 0px 13px 20px;
+  overflow-x: hidden;
 }
 .ham-menu a {
   padding: 15px;
+  padding-right: 0px;
 }
 .ham-menu select {
   font-size: 16px;
   font-weight: 600;
   width: 100%;
   padding: 15px;
+  padding-right: 0px;
+  border: 0px;
+  margin: 0px;
+  color: #1F7A54;
+}
+.ham-menu .select-drop-down {
+  background-color: #EEEEEE;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  padding: 15px;
+  padding-right: 0px;
   border: 0px;
   margin: 0px;
   color: #1F7A54;
