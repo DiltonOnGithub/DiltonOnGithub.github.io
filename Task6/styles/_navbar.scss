@@ -44,6 +44,7 @@
     margin-right: 0px;
 }
 .ham-menu{
+    display: none;
     position: fixed;
     top:50px;
     right: 40px;
@@ -54,6 +55,9 @@
     z-index: 10000;
 }
 .alerts{
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
     position: fixed;
     top:50px;
     right: 80px;
@@ -64,6 +68,7 @@
     z-index: 10000;
 }
 .announcements{
+    display: none;
     position: fixed;
     top:50px;
     right: 120px;
