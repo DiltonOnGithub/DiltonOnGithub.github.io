@@ -59,9 +59,10 @@
     font-family: inherit;
     z-index: 10000;
     box-shadow: #0000003D 0px 13px 20px;
-    a{
+    
+    a {
         padding: 15px;
-    }
+    };
     select{
         font-size: 16px;
         font-weight: 600;
@@ -70,7 +71,17 @@
         border: 0px;
         margin: 0px;
         color: #1F7A54;
-    }
+    };
+    .select-drop-down{
+        background-color: #EEEEEE;
+        font-size: 16px;
+        font-weight: 600;
+        width:100%;
+        padding-left:15px;
+        border: 0px;
+        margin: 0px;
+        color: #1F7A54;
+    };
 }
 .alerts{
     display: flex;
