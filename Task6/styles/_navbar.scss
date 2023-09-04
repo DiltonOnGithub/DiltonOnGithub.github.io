@@ -43,10 +43,12 @@
     margin-right: 0px;
 }
 .ham-menu{
-    display: none;
-    position: fixed;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
     top:50px;
-    right: 40px;
+    right: 10px;
     height: 500px;
     width:200px;
     background-color: aquamarine;
