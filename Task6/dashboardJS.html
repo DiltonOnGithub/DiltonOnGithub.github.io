@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <div class="header">
+        <img src="assets/headerlogo.svg" alt="">
+        <div class="navbar-menu">
+            <a href="" class="active item">DASHBOARD</a>
+            <a href="" class="item">CONTENT</a>
+            <a href="" class="item">USERS</a>
+            <a href="" class="item">REPORTS</a>
+            <a href="" class="item">ADMIN</a>
+            <div class="icons" id="alerts-icon"><img src="assets/alerts.svg" alt=""><span class="num">2</span></a></div>
+            <div class="icons" id="announcements-icon"><img src="assets/announcements.svg" alt=""><span class="num">1</span></div>
+            <div class="icons"><img src="assets/account_circle.svg" alt=""><span class="num" style="background-color: white;color: black;">T</span></div>
+            <div class="ham" id="hamburger-icon"><img src="assets/hamburger-menu.svg" alt=""></div>
+        </div>
+    </div>
+    <div class="ham-menu" id="hamburger-menu">
+        <a href="" >DASHBOARD</a>
+        
+        <select class="select-drop-down">
+            <option>CONTENT</option>
+        </select>
+        <div class="select-drop-down">
+            <a>COURSE CATALOG</a>
+        </div>
+        <select>
+            <option>USERS</option>
+        </select>
+        <select>
+            <option>REPORTS</option>
+        </select>
+        <select>
+            <option>ADMIN</option>
+        </select>
+    </div>
+    <div class="announcements" id="announcements-menu"><p>jfslkhoyohkhoho Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum sed quis tenetur vero ab aliquid dicta dolorem in vel doloremque sapiente itaque voluptate suscipit adipisci error nihil cum, beatae cumque quidem dolores? Eos asperiores, ipsam fuga amet debitis pariatur explicabo molestias officia odit dolorem exercitationem quisquam voluptatibus sequi sunt nam dolorum, suscipit quam? Quisquam nobis sequi laborum nostrum aut itaque laboriosam labore, vero laudantium pariatur maiores amet adipisci enim obcaecati voluptatum similique dolore aspernatur! Deserunt doloremque at iure repellendus possimus obcaecati facilis eius, provident accusantium reiciendis commodi corrupti voluptatum deleniti consequuntur ex quibusdam fugiat et perspiciatis esse id nostrum ullam?</p></div>
+    <div class="alerts" id="alerts-menu"><p>jfslkhoyohkhoho Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum sed quis tenetur vero ab aliquid dicta dolorem in vel doloremque sapiente itaque voluptate suscipit adipisci error nihil cum, beatae cumque quidem dolores? Eos asperiores, ipsam fuga amet debitis pariatur explicabo molestias officia odit dolorem exercitationem quisquam voluptatibus sequi sunt nam dolorum, suscipit quam? Quisquam nobis sequi laborum nostrum aut itaque laboriosam labore, vero laudantium pariatur maiores amet adipisci enim obcaecati voluptatum similique dolore aspernatur! Deserunt doloremque at iure repellendus possimus obcaecati facilis eius, provident accusantium reiciendis commodi corrupti voluptatum deleniti consequuntur ex quibusdam fugiat et perspiciatis esse id nostrum ullam?</p></div>
+    
+    <div class="dashboard-container" id="DB">
+
+        <div class="display-details" id="dd">
+            <div class="detail-card">
+                <p>Showing 4 of 4 courses</p>
+            </div>
+            <div  class="detail-card">
+                <label for="sortBy">Sort By: </label>
+                <select name="sortBy" id="sortBy">
+                    <option value="CourseName">Course Name</option>
+                </select>
+                <img src="assets/sort.svg" alt="">
+            </div>
+        </div>
+
+        
+    </div>
+    
+    <div class="footer">
+        <a href="" style="border-right: 1px solid grey;">About</a><a href="">Contact Us</a>
+        <div class="footer-banner">
+            <img src="assets/footerlogo.svg" alt=""><p>Copyright &copy; 2020-2021 <b>Zeus Systems Pvt. Ltd.</b> All rights reserved.</p>
+        </div>
+    </div>
+    <script type="module" src="dashboard.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
