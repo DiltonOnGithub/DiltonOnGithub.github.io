@@ -306,12 +306,50 @@ input[type=submit] {
   visibility: hidden;
   position: fixed;
   top: 50px;
-  right: 80px;
+  right: 40px;
   height: 500px;
-  width: 200px;
-  background-color: aquamarine;
+  width: 300px;
+  box-shadow: rgba(163, 163, 163, 0.2392156863) 0px 13px 20px;
+  z-index: 1000;
+  background-color: white;
+  color: black;
+}
+.alerts .alerts-container {
+  display: flex;
+  flex-direction: column;
+  height: 470px;
   overflow-y: scroll;
-  z-index: 10000;
+}
+.alerts .alerts-container .alert {
+  padding: 5px;
+  border-top: 0.5px solid #d1d1d1;
+}
+.alerts .alerts-container .alert p {
+  margin: 0px;
+  padding: 5px;
+}
+.alerts .unread {
+  background-color: #FFFFEE;
+}
+.alerts .buttons {
+  width: 100%;
+  height: 30px;
+  box-shadow: rgba(0, 0, 0, 0.2392156863) 0px 13px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.alerts .buttons a {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  padding: 10px;
+  color: black;
+  padding: 10px;
+  color: green;
+  text-align: center;
+  border-right: 0.5px solid grey;
 }
 
 .announcements {
@@ -322,10 +360,58 @@ input[type=submit] {
   top: 50px;
   right: 40px;
   height: 500px;
-  width: 200px;
-  background-color: aquamarine;
-  overflow-y: scroll;
+  width: 315px;
+  box-shadow: rgba(0, 0, 0, 0.2392156863) 0px 13px 20px;
   z-index: 10000;
+  background-color: white;
+}
+.announcements .announcement-container {
+  display: flex;
+  flex-direction: column;
+  height: 470px;
+  overflow-y: scroll;
+}
+.announcements .announcement-container .ann {
+  padding: 5px;
+  border-top: 0.5px solid #d1d1d1;
+}
+.announcements .announcement-container .ann p {
+  margin: 0px;
+  padding: 5px;
+  font-size: 16px;
+}
+.announcements .announcement-container .ann p.who {
+  font-size: 12px;
+}
+.announcements .announcement-container .ann .when {
+  display: flex;
+  flex-direction: row;
+}
+.announcements .announcement-container .ann .when p {
+  font-size: 12px;
+}
+.announcements .unread {
+  background-color: #FFFFEE;
+}
+.announcements .buttons {
+  width: 100%;
+  height: 30px;
+  box-shadow: rgba(0, 0, 0, 0.2392156863) 0px 13px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.announcements .buttons a {
+  width: 50%;
+  height: 30px;
+  background-color: white;
+  padding: 10px;
+  color: black;
+  padding: 10px;
+  color: green;
+  text-align: center;
+  border-right: 0.5px solid grey;
 }
 
 .dashboard-container {
