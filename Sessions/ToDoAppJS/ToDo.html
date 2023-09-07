@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToDo App</title>
+<script src="https://kit.fontawesome.com/d5f22ee4f8.js" crossorigin="anonymous"></script>
+<style>
+    body{
+        height: 100vh;
+        overflow-y: hidden;
+        background-color: rgb(84, 37, 128);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main-container{
+        width:40%;
+        border-radius: 25px 0px 0px 25px;
+        background-color: rgb(41, 41, 41);
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        box-shadow: black 10px 10px 15px;
+    }
+    .main-container::-webkit-scrollbar {
+  width: 8px;
+}
+.main-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.main-container::-webkit-scrollbar-thumb {
+  background: rgb(85, 84, 84); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.main-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(84, 37, 128); 
+}
+    .heading{
+        background-color: blueviolet;
+        width: 100%;
+        border-radius: 25px 0px 0px 0px;
+        text-align: center;
+        color: white;
+    }
+    h1{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 100;
+        font-size: 48px;
+    }
+    .ta-wrapper{
+        width: 80%;
+        margin: 15px auto;
+    }
+    #todo-input{
+        width:80%;
+        background-color: rgb(114, 114, 114);
+        color: white;
+        margin:0px;
+        padding: 3px;
+        height: 30px;
+        border:0px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+    #submit{
+        width:15%;
+        background-color: rgb(140, 31, 161);
+        color: white;
+        margin:0px;
+        padding: 5px;
+        height: 35px;
+        border:0px;
+        border-radius: 8px;
+    }
+    .todo-lists{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 350px;
+        border: 1px solid red;
+    }
+    .todo-item{
+        width:100%;
+        background-color: rgb(41, 41, 41);
+        color: white;
+        margin:0px;
+        padding: 3px;
+        height: 40px;
+        border-bottom: 1px solid grey;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .text{
+        width:100%;
+        background-color: rgb(41, 41, 41);
+        color: white;
+        height: 100%;
+        border: 0px;
+        font-size: 18px;
+        text-align: left;
+    }
+    .action-items{
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 5px;
+        width:25%;
+        color: rgb(85, 84, 84);
+        margin:0px;
+        padding: 5px;
+        height: 35px;
+        border:0px;
+        border-radius: 8px;
+    }
+</style>
+</head>
+
+<body>
+<div class="main-container">
+    <div class="heading">
+      <h1>Todo App</h1>
+    </div>
+    <div class="ta-wrapper">
+      <div class="input-wrapper">
+        <form action="">
+        <input type="text" id="todo-input" required>
+        <button id="submit">Add</button>
+    </form>
+      </div>
+      <div class="todo-lists">
+        <!-- todo item append here -->
+      </div>
+    </div>
+</div>
+</body>
+
+<script src="ToDo.js"></script>
+
+</html>
