@@ -58,13 +58,13 @@ todo_edit_el.addEventListener('click', (e) => {
   if (todo_edit_el.classList.contains("edit")) {
     todo_edit_el.classList.remove("edit");
     todo_edit_el.classList.remove("fa-pen-to-square");
-    todo_edit_el.classList.add("fa-x");
+    todo_edit_el.classList.add("fa-save");
     todo_edit_el.classList.add("save");
     todo_input_el.removeAttribute("readonly");
     todo_input_el.focus();
   } else {
     todo_edit_el.classList.remove("save");
-    todo_edit_el.classList.remove("fa-x");
+    todo_edit_el.classList.remove("fa-save");
     todo_edit_el.classList.add("fa-pen-to-square");
     todo_edit_el.classList.add("edit");
     todo_input_el.setAttribute("readonly", "readonly");
