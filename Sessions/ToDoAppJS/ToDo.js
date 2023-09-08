@@ -1,60 +1,72 @@
 // access input field
 const input = document.querySelector('#todo-input');
+input.addEventListener("keyup", myFunc)
+
+function myFunc(event){
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("submit").click();
+  }
+}
 
 // Listening to the click event from the "Add" button.
-document.querySelector('#submit').addEventListener('click', () => {
- // value of the input field
- const inputData = input.value;
-input.value = "";
+document.querySelector('#submit').addEventListener('click', addTask);
 
- // creating todo item element
- const todo_el = document.createElement('div');
-todo_el.classList.add('todo-item');
+function addTask(){
+  // value of the input field
+  const inputData = input.value;
+  input.value = "";
 
- const todo_content_el = document.createElement('div');
-todo_el.appendChild(todo_content_el);
+  if(inputData != ""){
+  // creating todo item element
+  const todo_el = document.createElement('div');
+  todo_el.classList.add('todo-item');
 
- const todo_input_el = document.createElement('input');
-todo_input_el.classList.add('text');
-todo_input_el.type = 'text';
-todo_input_el.value = inputData;
-todo_input_el.setAttribute('readonly', 'readonly');
+  const todo_content_el = document.createElement('div');
+  todo_el.appendChild(todo_content_el);
 
-todo_content_el.appendChild(todo_input_el);
+  const todo_input_el = document.createElement('input');
+  todo_input_el.classList.add('text');
+  todo_input_el.type = 'text';
+  todo_input_el.value = inputData;
+  todo_input_el.setAttribute('readonly', 'readonly');
 
- const todo_actions_el = document.createElement('div');
-todo_actions_el.classList.add('action-items');
+  todo_content_el.appendChild(todo_input_el);
 
- const todo_done_el = document.createElement('i');
-todo_done_el.classList.add('fa-solid');
-todo_done_el.classList.add('fa-check');
+  const todo_actions_el = document.createElement('div');
+  todo_actions_el.classList.add('action-items');
 
- const todo_edit_el = document.createElement('i');
-todo_edit_el.classList.add('fa-solid');
-todo_edit_el.classList.add('fa-pen-to-square');
-todo_edit_el.classList.add('edit');
+  const todo_done_el = document.createElement('i');
+  todo_done_el.classList.add('fa-solid');
+  todo_done_el.classList.add('fa-check');
 
- const todo_delete_el = document.createElement('i');
-todo_delete_el.classList.add('fa-solid');
-todo_delete_el.classList.add('fa-trash');
+  const todo_edit_el = document.createElement('i');
+  todo_edit_el.classList.add('fa-solid');
+  todo_edit_el.classList.add('fa-pen-to-square');
+  todo_edit_el.classList.add('edit');
 
-todo_actions_el.appendChild(todo_done_el)
-todo_actions_el.appendChild(todo_edit_el);
-todo_actions_el.appendChild(todo_delete_el);
+  const todo_delete_el = document.createElement('i');
+  todo_delete_el.classList.add('fa-solid');
+  todo_delete_el.classList.add('fa-trash');
 
-todo_el.appendChild(todo_actions_el);
- console.log(todo_el)
- // add the todo-item to lists
- document.querySelector('.todo-lists').appendChild(todo_el);
+  todo_actions_el.appendChild(todo_done_el)
+  todo_actions_el.appendChild(todo_edit_el);
+  todo_actions_el.appendChild(todo_delete_el);
 
- // done functionality
+  todo_el.appendChild(todo_actions_el);
+  console.log(todo_el)
+  // add the todo-item to lists
+  document.querySelector('.todo-lists').appendChild(todo_el);
+  // done functionality
 todo_done_el.addEventListener('click', () => {
   todo_input_el.classList.add('done')
   todo_el.removeChild(todo_actions_el);
 })
 
  // edit functionality
-todo_edit_el.addEventListener('click', (e) => {
+todo_edit_el.addEventListener('click', editfunct);
+
+function editfunct(e){
   if (todo_edit_el.classList.contains("edit")) {
     todo_edit_el.classList.remove("edit");
     todo_edit_el.classList.remove("fa-pen-to-square");
@@ -62,6 +74,18 @@ todo_edit_el.addEventListener('click', (e) => {
     todo_edit_el.classList.add("save");
     todo_input_el.removeAttribute("readonly");
     todo_input_el.focus();
+    todo_input_el.addEventListener('keyup', anotherfunct);
+    function anotherfunct(a){
+      if (a.keyCode === 13) {
+        a.preventDefault();
+        todo_edit_el.classList.remove("save");
+        todo_edit_el.classList.remove("fa-save");
+        todo_edit_el.classList.add("fa-pen-to-square");
+        todo_edit_el.classList.add("edit");
+        todo_input_el.setAttribute("readonly", "readonly");
+        todo_input_el.blur();
+      }
+    }
   } else {
     todo_edit_el.classList.remove("save");
     todo_edit_el.classList.remove("fa-save");
@@ -69,11 +93,17 @@ todo_edit_el.addEventListener('click', (e) => {
     todo_edit_el.classList.add("edit");
     todo_input_el.setAttribute("readonly", "readonly");
   }
-});
+}
 
  // delete functionality
 todo_delete_el.addEventListener('click', (e) => {
   console.log(todo_el);
   document.querySelector('.todo-lists').removeChild(todo_el);
 });
-})
+}else{
+  alert("Please enter a task!")
+}
+
+
+ 
+}
