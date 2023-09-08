@@ -101,7 +101,7 @@ todo_delete_el.addEventListener('click', (e) => {
   document.querySelector('.todo-lists').removeChild(todo_el);
 });
 }else{
-  alert("Please enter a task!")
+  alert("Cannot Add empty Task!.Please enter a task in the input field.")
 }
 
 
