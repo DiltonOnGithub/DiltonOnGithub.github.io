@@ -7,19 +7,20 @@
     <style>
         body{
         height: 100vh;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         overflow-y: hidden;
         background-color: rgb(33, 113, 204);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: white;
     }
     
     .main-container{
         width:40%;
         border-radius: 25px;
         background-color: rgb(41, 41, 41);
-        height: 600px;
         display: flex;
         flex-direction: column;
         box-shadow: black 10px 10px 15px;
@@ -27,28 +28,33 @@
         padding: 25px;
     }
     #submit{
-        width:90%;
-        background-color: rgb(140, 31, 161);
+        width:40%;
+        background-color: rgb(43, 95, 192);
         color: white;
         margin:0px;
         padding: 5px;
-        height: 35px;
+        height: 50px;
         border:0px;
         border-radius: 10px;
+        box-shadow: black 10px 10px 15px;
+        font-size: larger;
+    }
+    #submit:hover{
+        cursor: pointer;
     }
     </style>
 </head>
 <body>
     <div class="main-container">
-    <button id="submit">I'm Feeling Lucky!</button>     
+    <button id="submit">Click Me!</button>     
     </div>
 </body>
 <script>
     document.querySelector('#submit').addEventListener('click', onClick);
     function onClick(){
-        alert("Cannot Add empty Task!.Please enter a task in the input field.");
-        const h1 = document.createElement("p");
-        const h1node = document.createTextNode('You clicked the button!');
+        alert("Congratulations!!! 🎊🎉✨\nYou clicked the button!");
+        const h1 = document.createElement("h1");
+        const h1node = document.createTextNode('You clicked the button! 🎊🎉✨');
         h1.appendChild(h1node);
         const maincontainer = document.querySelector('.main-container');
         maincontainer.appendChild(h1);
