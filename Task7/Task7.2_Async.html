@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Async</title>
+    <style>
+        body{
+        height: 100vh;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        overflow-y: hidden;
+        background-color: rgb(34, 143, 79);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    
+    .main-container{
+        width:40%;
+        min-height: 250px;
+        border-radius: 25px;
+        background-color: rgb(41, 41, 41);
+        display: flex;
+        flex-direction: column;
+        box-shadow: black 10px 10px 15px;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+    }
+    #submit{
+        width:250px;
+        background-color: rgb(43, 95, 192);
+        color: white;
+        margin:50px auto;
+        padding: 5px;
+        height: 50px;
+        border:0px;
+        border-radius: 10px;
+        box-shadow: black 10px 10px 15px;
+        font-size: larger;
+    }
+    #submit:hover{
+        cursor: pointer;
+    }
+    h5{
+        font-family: 'Courier New', Courier, monospace;
+        font-style: italic;
+    }
+    </style>
 </head>
 <body>
-    
+    <div class="main-container">
+        <h1></h1>
+        <h5></h5>     
+    </div>
+    <button id="submit">I'm Feeling Lucky!</button>
 </body>
+<script>
+    const text = document.querySelector("h1");
+    const author = document.querySelector("h5");
+
+    const getNewQuote = async () =>
+    {
+        //api
+        var url="https://type.fit/api/quotes";    
+
+        try{
+            text.innerHTML = "Fetching....";
+            // fetch
+            let response = await fetch(url);
+            if (response.status != 200){
+                throw new Error('Network response was not ok, status code: ' + response.status);
+            }
+
+            //parse
+            const allQuotes = await response.json();
+
+            
+            const index = Math.floor(Math.random()*allQuotes.length);
+            const quote=allQuotes[index].text;
+            const auth=allQuotes[index].author;
+
+            if(auth==null)
+            {
+                author = "Anonymous";
+            }
+
+            text.innerHTML="\""+quote+"\"";
+            author.innerHTML="~ "+auth;
+        }
+        catch(error){
+            text.innerHTML = "An unknown error occured :/";
+        }
+        
+    }
+    document.querySelector('#submit').addEventListener('click', getNewQuote);
+</script>
 </html>

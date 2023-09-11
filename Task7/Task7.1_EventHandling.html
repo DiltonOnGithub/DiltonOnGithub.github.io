@@ -46,18 +46,22 @@
 </head>
 <body>
     <div class="main-container">
-    <button id="submit">Click Me!</button>     
+    <button id="submit">Click Me!</button>
+    <h1></h1>
     </div>
 </body>
 <script>
     document.querySelector('#submit').addEventListener('click', onClick);
+    
     function onClick(){
-        alert("Congratulations!!! 🎊🎉✨\nYou clicked the button!");
-        const h1 = document.createElement("h1");
-        const h1node = document.createTextNode('You clicked the button! 🎊🎉✨');
-        h1.appendChild(h1node);
-        const maincontainer = document.querySelector('.main-container');
-        maincontainer.appendChild(h1);
+        const h1 = document.querySelector("h1");
+        h1.innerHTML = "loading...";
+        setTimeout(() => {
+            alert("Congratulations!!! 🎊🎉✨\nYou clicked the button!");
+            h1.innerHTML ="You clicked the button! 🎊🎉✨";
+        }, 2000);
+        
+        
     }
 </script>
 </html>
